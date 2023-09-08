@@ -17,10 +17,10 @@ class CustomTextField extends StatelessWidget {
         enabledBorder: buildBorder(),
         focusedErrorBorder: buildBorder(kPrimaryColor),
         hintText: hintText,
-        hintStyle: const TextStyle(
-          color: kPrimaryColor,
-          fontSize: 26,
-        )
+        // hintStyle: const TextStyle(
+        //   color: kPrimaryColor,
+        //   fontSize: 26,
+        // )
       ),
     );
   }
