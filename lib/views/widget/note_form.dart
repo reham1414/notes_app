@@ -37,9 +37,12 @@ class _NoteFormState extends State<NoteForm> {
             maxLines: 5,
           ),
           const SizedBox(height: 120,),
-          CustomButton(
-            onTap: (){
-              if(formKey.currentState!.validate()){
+          BlocBuilder<AddNoteCubit, AddNoteState>(
+            builder: (context, state) {
+                return CustomButton(
+                  isLoading: state is AddNoteFailure ? true : false,
+                onTap: (){
+                if(formKey.currentState!.validate()){
                 formKey.currentState!.save();
                 var noteModel =NoteModel(
                     title: title!,
@@ -53,7 +56,9 @@ class _NoteFormState extends State<NoteForm> {
                 autoValidateMode = AutovalidateMode.always;
               }
             },
-          ),
+          );
+  },
+),
           const SizedBox(height: 20,),
         ],
       ),
