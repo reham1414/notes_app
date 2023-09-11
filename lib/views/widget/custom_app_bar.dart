@@ -5,7 +5,7 @@ class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key, required this.title, required this.icon, required this.onPressedFunc});
  final String title;
  final IconData icon;
- final VoidCallback onPressedFunc;
+ final void Function()? onPressedFunc;
 
   @override
   Widget build(BuildContext context) {

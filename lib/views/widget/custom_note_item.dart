@@ -12,7 +12,7 @@ final NoteModel noteModel;
     return GestureDetector(
       onTap: (){
         Navigator.push(context, MaterialPageRoute(builder: (context){
-          return const EditView();
+          return  EditView(note: noteModel,);
         }));
       },
       child: Container(
