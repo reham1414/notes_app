@@ -40,7 +40,9 @@ final NoteModel noteModel;
                 ),
               ),
               trailing: IconButton(
-                  onPressed: (){},
+                  onPressed: (){
+                    noteModel.delete();
+                  },
                   icon: const Icon(Icons.delete,
                   size: 26,
                     color: Colors.black,
