@@ -11,15 +11,15 @@ final Color color;
   Widget build(BuildContext context) {
     return isActive ?
      CircleAvatar(
-      radius: 38,
+      radius: 32,
       backgroundColor: Colors.white,
       child: CircleAvatar(
-        radius: 36,
+        radius: 30,
         backgroundColor: color,
       ),
     )
         :  CircleAvatar(
-      radius: 38,
+      radius: 30,
       backgroundColor: color,
     );
   }
@@ -37,12 +37,13 @@ class _ColorsListViewState extends State<ColorsListView> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 38 * 2,
+      height: 32 * 2,
       child: ListView.builder(
+        scrollDirection: Axis.horizontal,
           itemCount: colors.length,
           itemBuilder: (context , index){
             return  Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 6.0),
+              padding: const EdgeInsets.symmetric(horizontal: 2),
               child: GestureDetector(
                   onTap: (){
                     currentIndex = index ;

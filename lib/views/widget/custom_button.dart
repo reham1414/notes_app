@@ -10,7 +10,7 @@ final bool isLoading;
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        height: 100,
+        height: 70,
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
           color: kPrimaryColor,
@@ -19,8 +19,8 @@ final bool isLoading;
         child:  Center(
           child: isLoading  ?
               const SizedBox(
-                height: 28,
-                width: 28,
+                height: 24,
+                width: 24,
                 child: CircularProgressIndicator(
                   color: Colors.black,
                 ),

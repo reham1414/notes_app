@@ -23,6 +23,7 @@ class _EditColorsListState extends State<EditColorsList> {
     return SizedBox(
       height: 38 * 2,
       child: ListView.builder(
+          scrollDirection: Axis.horizontal,
           itemCount: colors.length,
           itemBuilder: (context , index){
             return  Padding(
